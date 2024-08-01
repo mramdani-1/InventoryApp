@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
+    <form id="key-form">
+      <h2>Enter Access Key</h2>
+      <input type="text" id="access-key" placeholder="Access Key" required>
+      <button type="submit">Submit</button>
+      <p id="key-error" style="display:none;color:red;">Invalid key</p>
+    </form>
+    <form id="inventory-form" style="display:none;">
+      <h2>Add Inventory</h2>
+      <input type="text" name="nama-beras" placeholder="Nama Beras" required>
+      <input type="number" name="jumlah-beras" placeholder="Jumlah Beras" required>
+      <input type="number" name="harga-beras" placeholder="Harga Beras" required>
+      <button type="submit">Add</button>
+    </form>
+    <h2>Inventory History</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nama Beras</th>
+          <th>Jumlah Beras</th>
+          <th>Harga Beras</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody id="inventory-history"></tbody>
+    </table>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
